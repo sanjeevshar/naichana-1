@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naichana Village - Official Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    a { text-decoration: none; }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: linear-gradient(90deg, #2e8b57, #1b4d33);
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .header img { height: 60px; border-radius: 8px; }
+    .nav-menu { display: flex; gap: 20px; }
+    .nav-menu a {
+      color: white;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .nav-menu a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .location-btn {
+      background: white;
+      color: #2e8b57;
+      border: none;
+      padding: 10px 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .location-btn:hover { background: #ddd; }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('village.jpg') center/cover no-repeat;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .hero h1 { font-size: 60px; margin-bottom: 20px; }
+    .hero p { font-size: 22px; }
+
+    /* CONTENT SECTIONS */
+    .section {
+      background: white;
+      margin: 30px auto;
+      padding: 30px;
+      width: 85%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: slideRight 1.2s ease;
+    }
+    .section h2 {
+      font-size: 35px;
+      color: #2e8b57;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #2e8b57;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .section ul { padding-left: 20px; }
+    .section ul li {
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    /* CARDS */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .card {
+      background: #f9f9f9;
+      width: 220px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card h3 {
+      font-size: 20px;
+      color: #2e8b57;
+      margin: 10px 0;
+    }
+    .card p { font-size: 14px; padding: 0 10px 15px; }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 18px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 40px; }
+      .hero p { font-size: 18px; }
+      .card { width: 45%; }
+    }
+    @media(max-width: 500px) {
+      .card { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="logo.png" alt="Village Logo">
+    <div class="nav-menu">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="location-btn" onclick="window.location.href='https://www.google.com/maps/place/Naichana,+Haryana+123501/@28.1078481,76.5580452,994m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d515a743977f1:0xed865afa8fcbb0ec!8m2!3d28.1076747!4d76.5618277!16s%2Fg%2F1tftvbtr?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D'">📍 Location</button>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Welcome to Naichana Village</h1>
+    <p>Explore the heritage, culture, and beauty of our village</p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <h2>About Naichana</h2>
+    <ul>
+      <li>Naichana is a village in Tehsil Bawal, District Rewari, Haryana...</li>
+      <li>Located about 5-6 km from Bawal Town.</li>
+      <li>Known for its rich culture and agricultural heritage.</li>
+    </ul>
+  </div>
+
+  <!-- CROPS -->
+  <div class="section">
+    <h2>Crops (Fasal)</h2>
+    <div class="card-container">
+      <div class="card">
+        <a href="crops.html">
+          <img src="Crops/Pictures/crops.jpg" alt="Crops">
+          <div style="text-align:center;">
+            <h3>Village Crops</h3>
+            <p>Explore the main crops grown in Naichana village.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLES -->
+  <div class="section">
+    <h2>Temples</h2>
+    <div class="card-container">
+      <div class="card">
+        <a href="googa.html">
+          <img src="Googa/Pictures/googa24.jpg" alt="Googa Temple">
+          <div style="text-align:center;"><h3>Googa Ji Temple</h3></div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="shiv.html">
+          <img src="Shiv/pictures/shiv1.jpg" alt="Shiv Temple">
+          <div style="text-align:center;"><h3>Shiv Ji Temple</h3></div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="hanuman.html">
+          <img src="Hanuman mandir/pictures/hm3.jpg" alt="Hanuman Temple">
+          <div style="text-align:center;"><h3>Hanuman Ji Temple</h3></div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="krishna.html">
+          <img src="Krishna Temple/pictures/k3.jpg" alt="Krishna Temple">
+          <div style="text-align:center;"><h3>Krishna Ji Temple</h3></div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="mata.html">
+          <img src="Mata temple/pictures/m5.jpg" alt="Mata Temple">
+          <div style="text-align:center;"><h3>Mata Ji Temple</h3></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    &copy; 2025 Naichana Village | Designed with ❤️
+  </div>
+
+</body>
+</html>
